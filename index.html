@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YD Agency — Websites, Payment Systems & Digital Growth</title>
+<meta name="description" content="YD Agency builds premium business websites, online stores with payments, booking systems, social media and content for growing businesses.">
+<meta property="og:title" content="YD Agency — Your Business. Elevated.">
+<meta property="og:description" content="Websites, payment & booking systems, social media and content — one partner for your whole digital foundation.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d0d0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0d0b'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23f3efe7'%3EYD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0b; --ink-2:#171714; --ink-3:#24241f;
+  --paper:#f3efe7; --paper-2:#e9e4d9;
+  --line:rgba(243,239,231,.12); --line-dark:rgba(13,13,11,.12);
+  --muted:#9a968c; --muted-dark:#6b675e;
+  --accent:#ff5a1f; --accent-soft:rgba(255,90,31,.12);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,monospace;
+  --pad:clamp(20px,5vw,72px); --max:1280px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--ink);color:var(--paper);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--accent);color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.serif{font-family:var(--serif);font-weight:400}
+.it{font-style:italic}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+.light .eyebrow{color:var(--muted-dark)}
+section{position:relative}
+.sec{padding:clamp(80px,12vw,150px) 0}
+.light{background:var(--paper);color:var(--ink)}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.4vw,88px);line-height:.98;letter-spacing:-.02em}
+.h2 em{font-style:italic;color:var(--accent)}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:56ch}
+.light .lead{color:var(--muted-dark)}
+.sec-head{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:clamp(48px,7vw,88px)}
+@media(min-width:900px){.sec-head{grid-template-columns:1.3fr 1fr;align-items:end}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:500;font-size:15px;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s;white-space:nowrap}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--paper)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper)}
+.light .btn-ghost{border-color:var(--line-dark);color:var(--ink)}
+.light .btn-ghost:hover{border-color:var(--ink)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:var(--accent);color:var(--ink)}
+.link{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px;transition:color .25s}
+.link:hover{color:var(--accent)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(13,13,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.logo-mark{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1;letter-spacing:-.04em}
+.logo-mark span{color:var(--accent)}
+.logo small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;border-left:1px solid var(--line);padding-left:10px}
+.menu{display:none;gap:30px;font-size:14px}
+.menu a{color:var(--muted);transition:color .2s;position:relative}
+.menu a:hover,.menu a.active{color:var(--paper)}
+.menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--accent)}
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;font-family:var(--mono);font-size:11px}
+.lang button{padding:6px 10px;border-radius:999px;color:var(--muted);letter-spacing:.08em}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.nav .btn{padding:11px 18px;font-size:14px;display:none}
+.burger{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.burger i{display:block;width:16px;height:1.5px;background:var(--paper);position:relative;transition:.3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--paper);transition:.3s}
+.burger i::before{top:-5px}.burger i::after{top:5px}
+.menu-open .burger i{background:transparent}
+.menu-open .burger i::before{top:0;transform:rotate(45deg)}
+.menu-open .burger i::after{top:0;transform:rotate(-45deg)}
+.drawer{position:fixed;inset:76px 0 0 0;background:var(--ink);z-index:49;padding:32px var(--pad);display:flex;flex-direction:column;gap:4px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.35s var(--ease);overflow:auto}
+.menu-open .drawer{transform:none;opacity:1;pointer-events:auto}
+.drawer a{font-family:var(--serif);font-size:42px;line-height:1.15;display:flex;gap:16px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line)}
+.drawer a span{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.drawer a b{font-weight:400}
+.drawer a.btn{margin-top:28px;justify-content:center;align-items:center;font-family:var(--sans);font-size:16px;line-height:1.2;padding:17px;border:0}
+.drawer a.btn span{font-family:var(--sans);font-size:16px;color:var(--ink)}
+@media(min-width:1100px){.menu{display:flex}.burger{display:none}.nav .btn{display:inline-flex}}
+@media(max-width:420px){.logo small{display:none}}
+
+/* Hero */
+.hero{min-height:100svh;padding:140px 0 60px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 80% 30%,rgba(255,90,31,.16),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(243,239,231,.05),transparent 70%);pointer-events:none}
+.grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grid{display:grid;gap:56px;position:relative}
+@media(min-width:1000px){.hero-grid{grid-template-columns:1.15fr 1fr;align-items:center}}
+.h1{font-family:var(--serif);font-weight:400;font-size:clamp(58px,10vw,148px);line-height:.9;letter-spacing:-.035em;margin:22px 0 28px}
+.h1 em{font-style:italic;color:var(--accent)}
+.hero p.lead{margin-bottom:36px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);max-width:560px}
+.hero-meta div{font-size:13px;color:var(--muted)}
+.hero-meta b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--paper);line-height:1.1}
+
+/* Hero visual */
+.stage{position:relative;height:520px;max-width:560px;width:100%;justify-self:center}
+.card{position:absolute;border-radius:18px;background:var(--ink-2);border:1px solid var(--line);box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+.browser{inset:0 0 auto 0;height:380px;overflow:hidden;top:20px}
+.b-bar{display:flex;align-items:center;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.b-bar i{width:9px;height:9px;border-radius:50%;background:var(--ink-3)}
+.b-url{margin-left:12px;flex:1;font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--ink);border-radius:6px;padding:5px 10px;display:flex;align-items:center;gap:6px}
+.b-url::before{content:"";width:7px;height:7px;border-radius:50%;background:#3ddc84}
+.b-body{padding:26px 24px;display:grid;gap:14px}
+.b-top{display:flex;justify-content:space-between;align-items:center}
+.b-top .mk{font-family:var(--serif);font-style:italic;font-size:22px}
+.b-top .pill{font-size:10px;font-family:var(--mono);padding:5px 10px;border-radius:999px;background:var(--accent);color:var(--ink)}
+.b-head{font-family:var(--serif);font-size:40px;line-height:.95;letter-spacing:-.02em}
+.b-head em{color:var(--accent)}
+.b-img{height:120px;border-radius:12px;background:linear-gradient(135deg,#3a2a20,#c26a3c 55%,#f0c08a);position:relative;overflow:hidden}
+.b-img::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,rgba(0,0,0,.12) 38px 39px)}
+.b-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.b-row span{height:8px;border-radius:4px;background:var(--ink-3)}
+.reel{width:150px;height:240px;right:-14px;top:180px;overflow:hidden;background:linear-gradient(160deg,#1f1a14,#5b3622 60%,#ff5a1f);animation:float 7s ease-in-out infinite}
+.reel .tag{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;padding:4px 8px;border-radius:999px;background:rgba(13,13,11,.6);backdrop-filter:blur(6px)}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center}
+.reel .play span{width:46px;height:46px;border-radius:50%;background:rgba(243,239,231,.92);display:grid;place-items:center}
+.reel .play span::after{content:"";border-left:13px solid var(--ink);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.reel .bars{position:absolute;left:12px;right:12px;bottom:14px;display:grid;gap:6px}
+.reel .bars i{height:6px;border-radius:3px;background:rgba(243,239,231,.5)}
+.reel .bars i:last-child{width:60%}
+.flow{left:-18px;bottom:0;width:270px;padding:16px;animation:float 8s ease-in-out infinite reverse}
+.flow h6{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:10px;display:flex;justify-content:space-between}
+.flow h6 b{color:#3ddc84;font-weight:400}
+.flow li{list-style:none;display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;opacity:0;transform:translateY(6px);animation:in .6s var(--ease) forwards}
+.flow li:nth-child(1){animation-delay:.6s}.flow li:nth-child(2){animation-delay:1.4s}.flow li:nth-child(3){animation-delay:2.2s}
+.flow li i{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.flow li:nth-child(2) i{background:#3ddc84}.flow li:nth-child(3) i{background:#8ab4ff}
+.flow li time{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted)}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes in{to{opacity:1;transform:none}}
+@media(max-width:560px){.stage{height:460px}.browser{height:330px}.b-head{font-size:32px}.reel{width:120px;height:200px;right:-6px;top:170px}.flow{left:-6px;width:240px}}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted)}
+.scroll-cue i{width:1px;height:36px;background:linear-gradient(var(--muted),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-height:760px),(max-width:999px){.scroll-cue{display:none}}
+
+/* Marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--ink)}
+.mq-track{display:flex;width:max-content;animation:mq 40s linear infinite}
+.mq-track span{font-family:var(--serif);font-size:clamp(26px,3.4vw,44px);padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.mq-track span::after{content:"✦";font-size:.5em;color:var(--accent)}
+.mq-track span:nth-child(even){font-style:italic;color:var(--muted)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Intro */
+.intro-grid{display:grid;gap:40px}
+@media(min-width:900px){.intro-grid{grid-template-columns:1fr 1fr;gap:80px}}
+.intro-big{font-family:var(--serif);font-size:clamp(30px,3.6vw,50px);line-height:1.08;letter-spacing:-.015em}
+.intro-big em{color:var(--accent)}
+.intro-list{display:grid;gap:0;align-content:start}
+.intro-list>div{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:22px 0;border-top:1px solid var(--line-dark)}
+.intro-list>div:last-child{border-bottom:1px solid var(--line-dark)}
+.intro-list b{font-weight:500;display:block;margin-bottom:4px}
+.intro-list p{color:var(--muted-dark);font-size:15px}
+.intro-list .n{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:3px}
+
+/* Services */
+.svc-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+@media(min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+.svc{background:var(--ink);padding:34px 28px 30px;display:flex;flex-direction:column;gap:18px;min-height:420px;transition:background .4s;position:relative}
+.svc:hover{background:var(--ink-2)}
+@media(max-width:699px){.svc{min-height:0}.svc h3{margin-top:10px}}
+.svc .top{display:flex;justify-content:space-between;align-items:flex-start}
+.svc .num{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.svc .ico{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--accent);transition:.4s var(--ease)}
+.svc:hover .ico{background:var(--accent);color:var(--ink);border-color:var(--accent);transform:rotate(-8deg)}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.02;letter-spacing:-.01em;margin-top:auto}
+.svc p{color:var(--muted);font-size:14.5px}
+.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.svc li{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:#c9c5bb}
+.svc .link{align-self:flex-start;margin-top:6px}
+.svc.feat{background:linear-gradient(180deg,rgba(255,90,31,.10),transparent 60%),var(--ink)}
+.svc .badge{position:absolute;top:34px;right:84px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+
+/* Packages */
+.pk-grid{display:grid;gap:18px}
+@media(min-width:760px){.pk-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1180px){.pk-grid{grid-template-columns:repeat(4,1fr)}}
+.pk{border:1px solid var(--line-dark);border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;gap:20px;background:#f8f5ef;transition:transform .4s var(--ease),box-shadow .4s}
+.pk:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(13,13,11,.35)}
+.pk.pop{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pk .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dark);display:flex;justify-content:space-between}
+.pk.pop .tag{color:var(--muted)}
+.pk.pop .tag b{color:var(--accent);font-weight:400}
+.pk h3{font-family:var(--serif);font-weight:400;font-size:36px;line-height:1}
+.pk .for{font-size:14px;color:var(--muted-dark);min-height:44px}
+.pk.pop .for{color:var(--muted)}
+.pk .price{font-family:var(--serif);font-size:24px;padding:14px 0;border-block:1px solid var(--line-dark)}
+.pk.pop .price{border-color:var(--line)}
+.pk .price small{display:block;font-family:var(--sans);font-size:12px;color:var(--muted-dark)}
+.pk.pop .price small{color:var(--muted)}
+.pk ul{list-style:none;display:grid;gap:10px;font-size:14.5px;flex:1}
+.pk li{display:grid;grid-template-columns:18px 1fr;gap:10px}
+.pk li::before{content:"";width:14px;height:14px;margin-top:4px;border-radius:50%;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%23ff5a1f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.pk .btn{justify-content:center}
+.pk-note{margin-top:28px;font-size:14px;color:var(--muted-dark);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* Philosophy */
+.philo{display:grid;gap:56px}
+@media(min-width:1000px){.philo{grid-template-columns:1fr 1fr;gap:96px;align-items:center}}
+.philo .lead{margin-top:28px}
+.eq{display:grid;gap:10px}
+.eq div{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border:1px solid var(--line);border-radius:16px;font-size:16px;transition:.4s var(--ease)}
+.eq div:hover{border-color:var(--accent);transform:translateX(6px)}
+.eq div span:last-child{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.eq .plus{justify-content:center;font-family:var(--serif);font-size:26px;color:var(--muted);border:0;padding:0}
+.eq .plus:hover{transform:none}
+.eq .total{background:var(--accent);color:var(--ink);border-color:var(--accent);font-weight:500}
+.eq .total span{color:var(--ink);font-family:var(--sans);font-size:16px}
+.eq .total b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:34px;line-height:1}
+
+/* Process */
+.steps{display:grid;gap:0;counter-reset:s}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:34px 26px 34px 0;border-top:1px solid var(--line-dark);position:relative}
+@media(min-width:900px){.step{padding:40px 28px 0 0}.step+.step{padding-left:28px;border-left:1px solid var(--line-dark)}}
+.step .n{font-family:var(--serif);font-style:italic;font-size:72px;line-height:1;color:var(--accent)}
+.step h3{font-family:var(--serif);font-weight:400;font-size:32px;margin:16px 0 10px}
+.step p{color:var(--muted-dark);font-size:15px}
+.step .del{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-dark);text-transform:uppercase}
+
+/* Work */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.filters button{padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted);transition:.25s}
+.filters button:hover{color:var(--paper);border-color:var(--paper)}
+.filters button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.work-grid{display:grid;gap:18px}
+@media(min-width:760px){.work-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.work-grid{grid-template-columns:repeat(3,1fr)}}
+.work{border-radius:20px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);transition:transform .45s var(--ease),opacity .35s}
+.work.hide{display:none}
+.work:hover{transform:translateY(-6px)}
+.cover{aspect-ratio:4/3;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:22px}
+.cover .ttl{font-family:var(--serif);font-size:44px;line-height:.95;letter-spacing:-.02em;position:relative;z-index:1;transition:transform .6s var(--ease)}
+.work:hover .cover .ttl{transform:translateY(-6px)}
+.cover .chip{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(13,13,11,.55);color:var(--paper);backdrop-filter:blur(6px);z-index:1}
+.c1{background:radial-gradient(circle at 75% 25%,#f3c27a 0 14%,transparent 15%),linear-gradient(150deg,#2b4a5e,#0f2433);color:#f6ead6}
+.c2{background:linear-gradient(120deg,#e9dccb 0 50%,#d7c3a9 50%);color:#2a1f17}
+.c2::before{content:"";position:absolute;right:-40px;top:-40px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(42,31,23,.3)}
+.c3{background:linear-gradient(180deg,#e8f1ee,#bcd9cf);color:#0e3b30}
+.c3::before{content:"";position:absolute;right:22px;top:22px;width:120px;height:120px;border-radius:22px;background:repeating-linear-gradient(0deg,#fff 0 18px,transparent 18px 26px);opacity:.75}
+.c4{background:linear-gradient(160deg,#101a2b,#24406b 70%,#7aa7ff);color:#eef3ff}
+.c4::before{content:"";position:absolute;left:0;right:0;bottom:38%;height:1px;background:rgba(255,255,255,.35);box-shadow:0 18px 0 rgba(255,255,255,.2),0 36px 0 rgba(255,255,255,.1)}
+.c5{background:radial-gradient(circle at 30% 30%,#ffb36b,#ff5a1f 45%,#7a1d05);color:#1a0b04}
+.c6{background:linear-gradient(135deg,#151515,#2b2b26);color:#d9ff5b}
+.c6::before{content:"";position:absolute;right:-30px;top:30px;width:200px;height:200px;border-radius:50%;border:16px solid rgba(217,255,91,.18)}
+.wk-body{padding:20px 22px 24px;display:grid;gap:10px}
+.wk-body p{color:var(--muted);font-size:14.5px}
+.wk-tags{display:flex;flex-wrap:wrap;gap:6px}
+.wk-tags span{font-size:11px;font-family:var(--mono);padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:#c9c5bb}
+.work-note{margin-top:32px;padding:20px 24px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;color:var(--muted);font-size:15px}
+
+/* Vision */
+.vm{display:grid;gap:18px}
+@media(min-width:900px){.vm{grid-template-columns:1fr 1fr}}
+.vm article{padding:clamp(28px,4vw,48px);border-radius:24px;border:1px solid var(--line-dark);background:#f8f5ef}
+.vm article.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.vm h3{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--accent);margin-bottom:18px}
+.vm p{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);line-height:1.1;letter-spacing:-.01em}
+.areas{margin-top:18px;padding:clamp(28px,4vw,48px);border-radius:24px;border:1px solid var(--line-dark)}
+.areas h3{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--muted-dark);margin-bottom:20px}
+.areas ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.areas li{padding:10px 18px;border-radius:999px;background:var(--paper-2);font-size:15px}
+
+/* About */
+.about{display:grid;gap:56px}
+@media(min-width:1000px){.about{grid-template-columns:1fr 1.1fr;gap:96px}}
+.about .lead{margin-top:24px}
+.vals{display:grid;gap:14px}
+@media(min-width:600px){.vals{grid-template-columns:1fr 1fr}}
+.val{padding:26px;border-radius:18px;border:1px solid var(--line);background:var(--ink-2)}
+.val .ico{color:var(--accent);margin-bottom:28px}
+.val h4{font-weight:500;font-size:17px;margin-bottom:6px}
+.val p{color:var(--muted);font-size:14.5px}
+
+/* FAQ */
+.faq-grid{display:grid;gap:48px}
+@media(min-width:1000px){.faq-grid{grid-template-columns:1fr 1.5fr;gap:96px}}
+.faq-side p{margin-top:24px}
+.faq-side .btn{margin-top:28px}
+.qa{border-top:1px solid var(--line-dark)}
+.qa:last-child{border-bottom:1px solid var(--line-dark)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0;font-size:clamp(17px,1.6vw,20px);font-weight:500}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line-dark);position:relative;transition:.35s var(--ease)}
+.qa summary i::before,.qa summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.qa summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:.35s var(--ease)}
+.qa[open] summary i{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.qa[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.qa .ans{padding:0 50px 26px 0;color:var(--muted-dark);font-size:16px;max-width:64ch}
+
+/* Contact */
+.contact-grid{display:grid;gap:56px}
+@media(min-width:1000px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:96px}}
+.c-ways{display:grid;gap:12px;margin-top:40px}
+.c-way{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;transition:.3s}
+.c-way:hover{border-color:var(--paper)}
+.c-way .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--ink-3);flex:none}
+.c-way.wa .ico{background:#25d366;color:#0d0d0b}
+.c-way small{display:block;color:var(--muted);font-size:13px}
+.c-way b{font-weight:500}
+.c-way .copy{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);transition:.25s}
+.c-way .copy:hover{color:var(--paper);border-color:var(--paper)}
+.c-way .copy.ok{color:#3ddc84;border-color:#3ddc84}
+form{background:var(--ink-2);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3.5vw,40px);display:grid;gap:18px}
+.f-row{display:grid;gap:18px}
+@media(min-width:600px){.f-row{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:8px;font-size:13px;color:var(--muted)}
+label .opt{color:#6f6c64}
+input,select,textarea{font:inherit;font-size:16px;color:var(--paper);background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px 16px;width:100%;transition:border-color .25s;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%239a968c' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px;padding-right:40px}
+select option{background:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+input.err,select.err,textarea.err{border-color:#ff6b6b}
+.f-err{color:#ff8a8a;font-size:13px;min-height:1em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none;width:1px}
+.chips span{display:inline-block;padding:9px 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:#c9c5bb;cursor:pointer;transition:.2s}
+.chips input:checked+span{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.chips input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+form .btn{justify-content:center;width:100%;font-size:16px;padding:17px}
+.f-note{font-size:12.5px;color:#6f6c64;text-align:center}
+
+/* CTA band */
+.band{padding:clamp(70px,10vw,120px) 0;background:var(--accent);color:var(--ink);overflow:hidden}
+.band .h2{font-size:clamp(46px,8vw,120px)}
+.band .h2 em{color:var(--paper)}
+.band-in{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between}
+.band .btn-dark:hover{background:var(--paper);color:var(--ink)}
+
+/* Footer */
+footer{padding:80px 0 36px;border-top:1px solid var(--line)}
+.f-grid{display:grid;gap:40px}
+@media(min-width:800px){.f-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}}
+.f-brand p{color:var(--muted);margin-top:16px;max-width:36ch;font-size:15px}
+footer h5{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+footer ul a:hover{color:var(--accent)}
+.f-big{font-family:var(--serif);font-style:italic;font-size:clamp(70px,19vw,270px);line-height:.8;letter-spacing:-.05em;color:var(--ink-3);margin:60px 0 20px;user-select:none;white-space:nowrap}
+.f-big span{color:var(--accent);opacity:.8}
+.f-bot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:var(--muted);font-size:13px;padding-top:24px;border-top:1px solid var(--line)}
+.f-bot a:hover{color:var(--paper)}
+
+/* Floating WhatsApp */
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;color:#0d0d0b;display:grid;place-items:center;box-shadow:0 14px 40px -10px rgba(37,211,102,.6);transform:scale(0);transition:transform .4s var(--ease)}
+.fab.show{transform:scale(1)}
+.fab:hover{transform:scale(1.08)}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--paper);color:var(--ink);padding:12px 20px;border-radius:999px;font-size:14px;z-index:60;transition:transform .4s var(--ease),visibility .4s;visibility:hidden}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.flow li{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo" aria-label="YD Agency home">
+      <span class="logo-mark">Y<span>D</span></span>
+      <small data-i18n="nav.studio">Digital Studio</small>
+    </a>
+    <nav class="menu" aria-label="Main">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#packages" data-i18n="nav.packages">Packages</a>
+      <a href="#approach" data-i18n="nav.approach">Our Approach</a>
+      <a href="#work" data-i18n="nav.work">Portfolio</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+      </div>
+      <a href="#contact" class="btn btn-accent"><span data-i18n="nav.cta">Let's Talk</span> <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <a href="#services"><span>01</span><b data-i18n="nav.services">Services</b></a>
+  <a href="#packages"><span>02</span><b data-i18n="nav.packages">Packages</b></a>
+  <a href="#approach"><span>03</span><b data-i18n="nav.approach">Our Approach</b></a>
+  <a href="#work"><span>04</span><b data-i18n="nav.work">Portfolio</b></a>
+  <a href="#about"><span>05</span><b data-i18n="nav.about">About</b></a>
+  <a href="#faq"><span>06</span><b data-i18n="nav.faq">FAQ</b></a>
+  <a href="#contact"><span>07</span><b data-i18n="nav.contact">Contact</b></a>
+  <a href="#contact" class="btn btn-accent"><span data-i18n="nav.cta">Let's Talk</span> <span class="arr">→</span></a>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="grain"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rv" data-i18n="hero.eyebrow">Digital Studio · Istanbul</span>
+      <h1 class="h1 rv d1" data-i18n="hero.title">Your Business. <em>Elevated.</em></h1>
+      <p class="lead rv d2" data-i18n="hero.lead">We design websites, build payment and booking systems, and create content that grabs attention — one partner for your entire digital foundation.</p>
+      <div class="hero-ctas rv d3">
+        <a href="#services" class="btn btn-accent"><span data-i18n="hero.cta1">Explore Our Services</span> <span class="arr">→</span></a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Let's Build Something</a>
+      </div>
+      <div class="hero-meta rv d3">
+        <div><b>8</b><span data-i18n="hero.m1">core services</span></div>
+        <div><b>EN · TR</b><span data-i18n="hero.m2">bilingual team</span></div>
+        <div><b data-i18n="hero.m3b">Free</b><span data-i18n="hero.m3">first consultation</span></div>
+      </div>
+    </div>
+
+    <div class="stage rv d2" aria-hidden="true">
+      <div class="card browser">
+        <div class="b-bar"><i></i><i></i><i></i><div class="b-url">yourbrand.com</div></div>
+        <div class="b-body">
+          <div class="b-top"><span class="mk">Maison</span><span class="pill">BOOK NOW</span></div>
+          <div class="b-head">Crafted for <em>you.</em></div>
+          <div class="b-img"></div>
+          <div class="b-row"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="card reel">
+        <span class="tag">REEL · 0:15</span>
+        <div class="play"><span></span></div>
+        <div class="bars"><i></i><i></i></div>
+      </div>
+      <div class="card flow">
+        <h6><span data-i18n="hero.flow">Lead flow</span><b>● LIVE</b></h6>
+        <ul>
+          <li><i></i><span data-i18n="hero.f1">New enquiry</span><time>09:41</time></li>
+          <li><i></i><span data-i18n="hero.f2">Booking confirmed</span><time>09:42</time></li>
+          <li><i></i><span data-i18n="hero.f3">Payment received</span><time>09:42</time></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a href="#intro" class="scroll-cue mono"><span data-i18n="hero.scroll">Scroll to explore</span><i></i></a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mq">
+    <span>Websites</span><span>Online Payments</span><span>Booking Systems</span><span>Social Media</span><span>Content</span><span>Branding</span><span>Automation</span><span>E-commerce</span>
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="sec light" id="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <span class="eyebrow rv" data-i18n="intro.eyebrow">One-stop digital agency</span>
+      <p class="intro-big rv d1" style="margin-top:24px" data-i18n="intro.big">Just say the word — we handle it <em>all.</em> From the first logo sketch to the payment that lands in your account, YD builds the tools that make your business look premium and run smoothly.</p>
+    </div>
+    <div class="intro-list rv d2">
+      <div><span class="n">01</span><div><b data-i18n="intro.a">Be seen</b><p data-i18n="intro.at">Build visibility and mindshare with a brand and website people remember.</p></div></div>
+      <div><span class="n">02</span><div><b data-i18n="intro.b">Reach the right people</b><p data-i18n="intro.bt">Social media and content made for your audience, not for everyone.</p></div></div>
+      <div><span class="n">03</span><div><b data-i18n="intro.c">Get paid, get booked</b><p data-i18n="intro.ct">Ready-built payment, ordering and booking systems that work from day one.</p></div></div>
+      <div><span class="n">04</span><div><b data-i18n="intro.d">Grow with less effort</b><p data-i18n="intro.dt">Automations and dashboards that replace spreadsheets and manual follow-ups.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rv" data-i18n="svc.eyebrow">What we do</span>
+        <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="svc.title">Everything your business needs to <em>grow.</em></h2>
+      </div>
+      <p class="lead rv d2" data-i18n="svc.lead">Pick one service or combine them. Every project is designed for your brand — no templates that look like everyone else's.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="top"><span class="num">01</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span></div>
+        <h3 data-i18n="s1.t">Website Design & Development</h3>
+        <p data-i18n="s1.d">Fast, mobile-first websites that look premium and turn visitors into customers.</p>
+        <ul><li data-i18n="s1.a">Business sites</li><li data-i18n="s1.b">Landing pages</li><li>SEO</li><li data-i18n="s1.c">Hosting setup</li></ul>
+        <a href="#contact" class="link" data-service="web"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc feat rv d1">
+        <span class="badge" data-i18n="svc.popular">Most requested</span>
+        <div class="top"><span class="num">02</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg></span></div>
+        <h3 data-i18n="s2.t">E-commerce & Online Payments</h3>
+        <p data-i18n="s2.d">Online stores and ready-built payment systems — cards, links and invoices, connected to your bank.</p>
+        <ul><li data-i18n="s2.a">Online store</li><li data-i18n="s2.b">Payment links</li><li data-i18n="s2.c">Invoices</li><li data-i18n="s2.e">Stock</li></ul>
+        <a href="#contact" class="link" data-service="pay"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv d2">
+        <div class="top"><span class="num">03</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14l2.5 2.5L16 12"/></svg></span></div>
+        <h3 data-i18n="s3.t">Booking & Ordering Systems</h3>
+        <p data-i18n="s3.d">Appointments, reservations and QR menus with automatic confirmations and reminders.</p>
+        <ul><li data-i18n="s3.a">Appointments</li><li data-i18n="s3.b">QR menus</li><li data-i18n="s3.c">Reminders</li></ul>
+        <a href="#contact" class="link" data-service="book"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv d3">
+        <div class="top"><span class="num">04</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.2 8.2l3.6 7.6M16.8 8.2l-3.6 7.6"/></svg></span></div>
+        <h3 data-i18n="s4.t">Business Systems & Automation</h3>
+        <p data-i18n="s4.d">CRM, dashboards and workflows that replace spreadsheets and save you hours every week.</p>
+        <ul><li>CRM</li><li data-i18n="s4.a">Dashboards</li><li data-i18n="s4.b">AI automation</li></ul>
+        <a href="#contact" class="link" data-service="sys"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv">
+        <div class="top"><span class="num">05</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></svg></span></div>
+        <h3 data-i18n="s5.t">Social Media Management</h3>
+        <p data-i18n="s5.d">Strategy, posting and community management on the platforms your customers actually use.</p>
+        <ul><li data-i18n="s5.a">Content calendar</li><li data-i18n="s5.b">Monthly reports</li><li data-i18n="s5.c">Ads</li></ul>
+        <a href="#contact" class="link" data-service="social"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv d1">
+        <div class="top"><span class="num">06</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span></div>
+        <h3 data-i18n="s6.t">Content Creation</h3>
+        <p data-i18n="s6.d">Photoshoots, Reels and visual content that make people stop scrolling.</p>
+        <ul><li data-i18n="s6.a">Photoshoots</li><li>Reels</li><li data-i18n="s6.b">Copywriting</li></ul>
+        <a href="#contact" class="link" data-service="content"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv d2">
+        <div class="top"><span class="num">07</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></span></div>
+        <h3 data-i18n="s7.t">Brand Identity & Graphic Design</h3>
+        <p data-i18n="s7.d">Logos, colour, type and every printed or digital piece your brand needs.</p>
+        <ul><li data-i18n="s7.a">Logo</li><li data-i18n="s7.b">Brand guide</li><li data-i18n="s7.c">Print</li></ul>
+        <a href="#contact" class="link" data-service="brand"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+      <article class="svc rv d3">
+        <div class="top"><span class="num">08</span><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 19h16M8 15l3.5-4 3 2.5L20 7"/></svg></span></div>
+        <h3 data-i18n="s8.t">Brand Strategy & Business Plans</h3>
+        <p data-i18n="s8.d">An outside view of your business: positioning, messaging and a clear plan to grow.</p>
+        <ul><li data-i18n="s8.a">Positioning</li><li data-i18n="s8.b">Business plan</li><li data-i18n="s8.c">Workshops</li></ul>
+        <a href="#contact" class="link" data-service="strategy"><span data-i18n="svc.discuss">Discuss this service</span> →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="sec light" id="packages">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rv" data-i18n="pk.eyebrow">Ready-built solutions</span>
+        <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="pk.title">Launch faster with a <em>package.</em></h2>
+      </div>
+      <p class="lead rv d2" data-i18n="pk.lead">Proven systems we customise to your brand — so you go live quickly without paying for things you don't need.</p>
+    </div>
+    <div class="pk-grid">
+      <article class="pk rv">
+        <div class="tag"><span>01</span></div>
+        <h3 data-i18n="p1.t">Starter</h3>
+        <p class="for" data-i18n="p1.f">For new businesses that need a professional presence fast.</p>
+        <div class="price"><span data-i18n="pk.quote">Custom quote</span><small data-i18n="pk.one">one-time</small></div>
+        <ul>
+          <li data-i18n="p1.a">Up to 5-page website</li>
+          <li data-i18n="p1.b">Mobile-first design</li>
+          <li data-i18n="p1.c">WhatsApp & contact form</li>
+          <li data-i18n="p1.d">Google Maps & basic SEO</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-package="Starter"><span data-i18n="pk.get">Get this package</span> <span class="arr">→</span></a>
+      </article>
+      <article class="pk rv d1">
+        <div class="tag"><span>02</span></div>
+        <h3 data-i18n="p2.t">Business</h3>
+        <p class="for" data-i18n="p2.f">For service businesses that take bookings and enquiries.</p>
+        <div class="price"><span data-i18n="pk.quote">Custom quote</span><small data-i18n="pk.one">one-time</small></div>
+        <ul>
+          <li data-i18n="p2.a">Everything in Starter</li>
+          <li data-i18n="p2.b">Online booking system</li>
+          <li data-i18n="p2.c">Automatic confirmations & reminders</li>
+          <li data-i18n="p2.d">Bilingual site (EN/TR)</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-package="Business"><span data-i18n="pk.get">Get this package</span> <span class="arr">→</span></a>
+      </article>
+      <article class="pk pop rv d2">
+        <div class="tag"><span>03</span><b data-i18n="pk.pop">Best value</b></div>
+        <h3 data-i18n="p3.t">Commerce</h3>
+        <p class="for" data-i18n="p3.f">For brands ready to sell and get paid online.</p>
+        <div class="price"><span data-i18n="pk.quote">Custom quote</span><small data-i18n="pk.one">one-time</small></div>
+        <ul>
+          <li data-i18n="p3.a">Online store or ordering site</li>
+          <li data-i18n="p3.b">Card payments & payment links</li>
+          <li data-i18n="p3.c">Orders & stock dashboard</li>
+          <li data-i18n="p3.d">Launch content kit</li>
+        </ul>
+        <a href="#contact" class="btn btn-accent" data-package="Commerce"><span data-i18n="pk.get">Get this package</span> <span class="arr">→</span></a>
+      </article>
+      <article class="pk rv d3">
+        <div class="tag"><span>04</span></div>
+        <h3 data-i18n="p4.t">Growth</h3>
+        <p class="for" data-i18n="p4.f">A monthly partner for content, social media and upkeep.</p>
+        <div class="price"><span data-i18n="pk.quote">Custom quote</span><small data-i18n="pk.mo">monthly</small></div>
+        <ul>
+          <li data-i18n="p4.a">Social media management</li>
+          <li data-i18n="p4.b">Monthly content & Reels</li>
+          <li data-i18n="p4.c">SEO blog & website updates</li>
+          <li data-i18n="p4.d">Monthly performance report</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-package="Growth"><span data-i18n="pk.get">Get this package</span> <span class="arr">→</span></a>
+      </article>
+    </div>
+    <p class="pk-note rv"><span data-i18n="pk.note">Need something different? Every package can be mixed and adjusted.</span> <a href="#contact" class="link" data-service="other"><span data-i18n="pk.custom">Build a custom plan</span> →</a></p>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="sec" id="philosophy">
+  <div class="wrap philo">
+    <div>
+      <span class="eyebrow rv" data-i18n="ph.eyebrow">Our philosophy</span>
+      <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="ph.title">More than a digital presence. A better way to <em>grow.</em></h2>
+      <p class="lead rv d2" data-i18n="ph.lead">Most businesses juggle a designer, a developer, a social media freelancer and a pile of spreadsheets. We bring it all under one roof — one vision, one team, one point of contact.</p>
+    </div>
+    <div class="eq rv d2">
+      <div><span data-i18n="ph.a">Creative direction</span><span>01</span></div>
+      <div class="plus">+</div>
+      <div><span data-i18n="ph.b">Digital experiences</span><span>02</span></div>
+      <div class="plus">+</div>
+      <div><span data-i18n="ph.c">Content production</span><span>03</span></div>
+      <div class="plus">+</div>
+      <div><span data-i18n="ph.d">Business systems</span><span>04</span></div>
+      <div class="plus">=</div>
+      <div class="total"><span data-i18n="ph.e">One complete digital foundation</span><b>YD</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="sec light" id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rv" data-i18n="ap.eyebrow">Our approach</span>
+        <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="ap.title">A step-by-step roadmap to <em>success.</em></h2>
+      </div>
+      <p class="lead rv d2" data-i18n="ap.lead">A clear process means no surprises — you always know what's happening, what's next and when it's ready.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3 data-i18n="ap.1">Discover</h3><p data-i18n="ap.1t">We learn your goals, your audience and the challenges holding you back.</p><div class="del" data-i18n="ap.1d">→ Free consultation</div></div>
+      <div class="step rv d1"><div class="n">02</div><h3 data-i18n="ap.2">Strategize</h3><p data-i18n="ap.2t">A tailored plan with scope, timeline and a clear quote — before any work starts.</p><div class="del" data-i18n="ap.2d">→ Proposal & quote</div></div>
+      <div class="step rv d2"><div class="n">03</div><h3 data-i18n="ap.3">Create</h3><p data-i18n="ap.3t">We design, build and produce — sharing progress so you can give feedback along the way.</p><div class="del" data-i18n="ap.3d">→ Design, build, test</div></div>
+      <div class="step rv d3"><div class="n">04</div><h3 data-i18n="ap.4">Grow</h3><p data-i18n="ap.4t">We launch, support and keep improving your presence as your business grows.</p><div class="del" data-i18n="ap.4d">→ Launch & support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rv" data-i18n="wk.eyebrow">Selected work</span>
+        <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="wk.title">Ideas we love to <em>build.</em></h2>
+      </div>
+      <p class="lead rv d2" data-i18n="wk.lead">A look at the kind of projects we create. These are concept studies that show our style and systems.</p>
+    </div>
+    <div class="filters rv" role="group" aria-label="Filter projects">
+      <button type="button" data-filter="all" aria-pressed="true" data-i18n="wk.all">All</button>
+      <button type="button" data-filter="web" aria-pressed="false" data-i18n="wk.web">Websites</button>
+      <button type="button" data-filter="social" aria-pressed="false" data-i18n="wk.social">Social Media</button>
+      <button type="button" data-filter="content" aria-pressed="false" data-i18n="wk.content">Content</button>
+      <button type="button" data-filter="systems" aria-pressed="false" data-i18n="wk.systems">Systems</button>
+    </div>
+    <div class="work-grid">
+      <article class="work rv" data-cat="web systems">
+        <div class="cover c1"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Mavi<br><i>Kahve</i></div></div>
+        <div class="wk-body"><p data-i18n="w1">Café website with QR menu and table ordering.</p><div class="wk-tags"><span data-i18n="wk.web">Websites</span><span data-i18n="wk.systems">Systems</span></div></div>
+      </article>
+      <article class="work rv d1" data-cat="content social">
+        <div class="cover c2"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Atelier<br><i>Nur</i></div></div>
+        <div class="wk-body"><p data-i18n="w2">Fashion label lookbook shoot and Instagram launch.</p><div class="wk-tags"><span data-i18n="wk.content">Content</span><span data-i18n="wk.social">Social Media</span></div></div>
+      </article>
+      <article class="work rv d2" data-cat="systems web">
+        <div class="cover c3"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Kliniq<br><i>Care</i></div></div>
+        <div class="wk-body"><p data-i18n="w3">Clinic booking system with SMS reminders and patient CRM.</p><div class="wk-tags"><span data-i18n="wk.systems">Systems</span><span data-i18n="wk.web">Websites</span></div></div>
+      </article>
+      <article class="work rv" data-cat="web">
+        <div class="cover c4"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Boğaz<br><i>Rentals</i></div></div>
+        <div class="wk-body"><p data-i18n="w4">Bilingual rental website with online deposits.</p><div class="wk-tags"><span data-i18n="wk.web">Websites</span></div></div>
+      </article>
+      <article class="work rv d1" data-cat="social content">
+        <div class="cover c5"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Sahra<br><i>Kitchen</i></div></div>
+        <div class="wk-body"><p data-i18n="w5">Restaurant Reels series and monthly social calendar.</p><div class="wk-tags"><span data-i18n="wk.social">Social Media</span><span data-i18n="wk.content">Content</span></div></div>
+      </article>
+      <article class="work rv d2" data-cat="systems">
+        <div class="cover c6"><span class="chip" data-i18n="wk.concept">Concept</span><div class="ttl">Lumen<br><i>Fit</i></div></div>
+        <div class="wk-body"><p data-i18n="w6">Gym memberships with recurring payments and a member dashboard.</p><div class="wk-tags"><span data-i18n="wk.systems">Systems</span></div></div>
+      </article>
+    </div>
+    <div class="work-note rv"><span data-i18n="wk.note">Want your business to be our next case study?</span><a href="#contact" class="link"><span data-i18n="wk.start">Start a project</span> →</a></div>
+  </div>
+</section>
+
+<!-- ============ VISION ============ -->
+<section class="sec light" id="vision">
+  <div class="wrap">
+    <span class="eyebrow rv" data-i18n="vm.eyebrow">Why we exist</span>
+    <div class="vm" style="margin-top:28px">
+      <article class="dark rv"><h3 data-i18n="vm.v">Vision</h3><p data-i18n="vm.vt">To be the go-to digital partner for growing businesses — known for premium work and measurable results.</p></article>
+      <article class="rv d1"><h3 data-i18n="vm.m">Mission</h3><p data-i18n="vm.mt">To give every client a unique identity and working systems that bring in customers, save time and help them grow.</p></article>
+    </div>
+    <div class="areas rv">
+      <h3 data-i18n="vm.ind">Who we work with</h3>
+      <ul>
+        <li data-i18n="i1">Cafés & restaurants</li><li data-i18n="i2">Beauty & wellness</li><li data-i18n="i3">Clinics</li><li data-i18n="i4">Fashion & retail</li><li data-i18n="i5">Real estate & rentals</li><li data-i18n="i6">Education</li><li data-i18n="i7">Gyms & fitness</li><li data-i18n="i8">Startups & personal brands</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow rv" data-i18n="ab.eyebrow">About YD</span>
+      <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="ab.title">Built around <em>your</em> business.</h2>
+      <p class="lead rv d2" data-i18n="ab.lead">YD is a digital studio that acts as one partner for your brand, your online presence, your content and your operations. We work in English and Turkish, and we design every project from scratch for the business behind it.</p>
+      <a href="#contact" class="btn btn-ghost rv d3" style="margin-top:32px"><span data-i18n="ab.cta">Work with us</span> <span class="arr">→</span></a>
+    </div>
+    <div class="vals">
+      <div class="val rv"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h4 data-i18n="ab.1">Personalized solutions</h4><p data-i18n="ab.1t">No one-size-fits-all. Everything starts from your goals and customers.</p></div>
+      <div class="val rv d1"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8"/></svg></div><h4 data-i18n="ab.2">Thoughtful design</h4><p data-i18n="ab.2t">Premium, art-directed work that makes your brand look its best.</p></div>
+      <div class="val rv d2"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></div><h4 data-i18n="ab.3">Practical technology</h4><p data-i18n="ab.3t">Real, working systems — every button does something useful.</p></div>
+      <div class="val rv d3"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h4 data-i18n="ab.4">Business goals first</h4><p data-i18n="ab.4t">We measure success by your results: more customers, more bookings, less admin.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec light" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <span class="eyebrow rv" data-i18n="fq.eyebrow">Ask us anything</span>
+      <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="fq.title">Questions, <em>answered.</em></h2>
+      <p class="lead rv d2" data-i18n="fq.lead">Can't find what you're looking for? Send us a message on WhatsApp — we reply quickly.</p>
+      <a href="https://wa.me/905335731799" target="_blank" rel="noopener" class="btn btn-dark rv d3"><span data-i18n="fq.cta">Ask on WhatsApp</span> <span class="arr">→</span></a>
+    </div>
+    <div class="rv d1">
+      <details class="qa" open><summary><span data-i18n="q1">How much does a website or system cost?</span><i></i></summary><div class="ans" data-i18n="a1">Every business is different, so we quote each project to its scope. After a free consultation you get a clear, fixed proposal — no hidden costs.</div></details>
+      <details class="qa"><summary><span data-i18n="q2">How long does a project take?</span><i></i></summary><div class="ans" data-i18n="a2">It depends on the scope. Packages launch faster because the systems are ready-built. You'll get a timeline with your proposal before we start.</div></details>
+      <details class="qa"><summary><span data-i18n="q3">Can I accept online payments through my website?</span><i></i></summary><div class="ans" data-i18n="a3">Yes. We integrate trusted payment providers available in your country — such as iyzico, PayTR or Stripe — for card payments, payment links and invoices.</div></details>
+      <details class="qa"><summary><span data-i18n="q4">Should my business be on every social network?</span><i></i></summary><div class="ans" data-i18n="a4">Not necessarily. We focus on the platforms where your customers actually spend time, so your effort goes where it counts.</div></details>
+      <details class="qa"><summary><span data-i18n="q5">Will I be able to update my website myself?</span><i></i></summary><div class="ans" data-i18n="a5">Yes. We can set up an easy editor for you, or handle updates as part of a monthly plan — whichever suits you.</div></details>
+      <details class="qa"><summary><span data-i18n="q6">Do you work with businesses outside Türkiye?</span><i></i></summary><div class="ans" data-i18n="a6">Yes. We work remotely in English and Turkish, with clients wherever they are.</div></details>
+      <details class="qa"><summary><span data-i18n="q7">What do you need from me to get started?</span><i></i></summary><div class="ans" data-i18n="a7">Just a short chat about your business and goals. If you have a logo, photos or examples you like, great — if not, we can create them.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow rv" data-i18n="ct.eyebrow">Contact</span>
+      <h2 class="h2 rv d1" style="margin-top:20px" data-i18n="ct.title">Let's build what's <em>next.</em></h2>
+      <p class="lead rv d2" style="margin-top:24px" data-i18n="ct.lead">Tell us about your business and what you need. Your first consultation is free.</p>
+      <div class="c-ways rv d3">
+        <a class="c-way wa" href="https://wa.me/905335731799" target="_blank" rel="noopener">
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.7.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></span>
+          <span><small data-i18n="ct.wa">Fastest reply</small><b data-i18n="ct.wab">Chat on WhatsApp</b></span>
+        </a>
+        <div class="c-way">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></span>
+          <span><small data-i18n="ct.ph">Phone / WhatsApp</small><a href="tel:+905335731799"><b>+90 533 573 17 99</b></a></span>
+          <button type="button" class="copy" id="copyBtn" data-copy="+905335731799" data-i18n="ct.copy">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <form id="form" class="rv d2" novalidate>
+      <div class="f-row">
+        <label><span data-i18n="f.name">Your name</span><input name="name" autocomplete="name" required></label>
+        <label><span><span data-i18n="f.biz">Business name</span> <span class="opt" data-i18n="f.opt">(optional)</span></span><input name="business" autocomplete="organization"></label>
+      </div>
+      <label><span data-i18n="f.email">Email</span><input name="email" type="email" autocomplete="email" required></label>
+      <label><span data-i18n="f.service">What do you need?</span>
+        <select name="service" id="service" required>
+          <option value="" data-i18n="f.choose">Choose a service</option>
+          <option value="web" data-i18n="s1.t">Website Design & Development</option>
+          <option value="pay" data-i18n="s2.t">E-commerce & Online Payments</option>
+          <option value="book" data-i18n="s3.t">Booking & Ordering Systems</option>
+          <option value="sys" data-i18n="s4.t">Business Systems & Automation</option>
+          <option value="social" data-i18n="s5.t">Social Media Management</option>
+          <option value="content" data-i18n="s6.t">Content Creation</option>
+          <option value="brand" data-i18n="s7.t">Brand Identity & Graphic Design</option>
+          <option value="strategy" data-i18n="s8.t">Brand Strategy & Business Plans</option>
+          <option value="other" data-i18n="f.notsure">Not sure yet — let's talk</option>
+        </select>
+      </label>
+      <div>
+        <label style="margin-bottom:10px"><span data-i18n="f.pkg">Interested in a package?</span></label>
+        <div class="chips" role="radiogroup">
+          <label><input type="radio" name="package" value="" checked><span data-i18n="f.none">Not sure</span></label>
+          <label><input type="radio" name="package" value="Starter"><span data-i18n="p1.t">Starter</span></label>
+          <label><input type="radio" name="package" value="Business"><span data-i18n="p2.t">Business</span></label>
+          <label><input type="radio" name="package" value="Commerce"><span data-i18n="p3.t">Commerce</span></label>
+          <label><input type="radio" name="package" value="Growth"><span data-i18n="p4.t">Growth</span></label>
+        </div>
+      </div>
+      <label><span data-i18n="f.msg">Tell us about your project</span><textarea name="message" required></textarea></label>
+      <div class="f-err" id="ferr" role="alert"></div>
+      <button type="submit" class="btn btn-accent"><span data-i18n="f.send">Continue on WhatsApp</span> <span class="arr">→</span></button>
+      <p class="f-note" data-i18n="f.note">Your message opens in WhatsApp, ready to send. Nothing is stored on this website.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="band">
+  <div class="wrap band-in">
+    <h2 class="h2" data-i18n="band.t">Ready to <em>elevate</em><br>your business?</h2>
+    <a href="#contact" class="btn btn-dark"><span data-i18n="band.c">Book a free consultation</span> <span class="arr">→</span></a>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="#home" class="logo"><span class="logo-mark">Y<span>D</span></span><small data-i18n="nav.studio">Digital Studio</small></a>
+        <p data-i18n="ft.tag">Websites, payment & booking systems, social media and content for growing businesses.</p>
+      </div>
+      <div><h5 data-i18n="ft.explore">Explore</h5><ul>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#packages" data-i18n="nav.packages">Packages</a></li>
+        <li><a href="#approach" data-i18n="nav.approach">Our Approach</a></li>
+        <li><a href="#work" data-i18n="nav.work">Portfolio</a></li>
+      </ul></div>
+      <div><h5 data-i18n="ft.company">Company</h5><ul>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#vision" data-i18n="ft.vision">Vision & Mission</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      </ul></div>
+      <div><h5 data-i18n="ft.touch">Get in touch</h5><ul>
+        <li><a href="https://wa.me/905335731799" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="tel:+905335731799">+90 533 573 17 99</a></li>
+        <li><a href="#contact" data-i18n="ft.msg">Send us a message</a></li>
+      </ul></div>
+    </div>
+    <div class="f-big" aria-hidden="true">Y<span>D</span> agency</div>
+    <div class="f-bot">
+      <span>© <span id="yr">2026</span> YD Agency. <span data-i18n="ft.rights">All rights reserved.</span></span>
+      <a href="#home" data-i18n="ft.top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905335731799" class="fab" id="fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.7.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var WA = "905335731799";
+
+  /* ---------- Turkish dictionary (English lives in the HTML) ---------- */
+  var TR = {
+    "nav.studio":"Dijital Stüdyo","nav.services":"Hizmetler","nav.packages":"Paketler","nav.approach":"Yaklaşımımız","nav.work":"Portfolyo","nav.about":"Hakkımızda","nav.faq":"SSS","nav.contact":"İletişim","nav.cta":"Konuşalım",
+    "hero.eyebrow":"Dijital Stüdyo · İstanbul","hero.title":"İşletmeniz. <em>Bir Üst Seviyede.</em>","hero.lead":"Web siteleri tasarlıyor, ödeme ve rezervasyon sistemleri kuruyor, dikkat çeken içerikler üretiyoruz — tüm dijital altyapınız için tek bir partner.","hero.cta1":"Hizmetlerimizi Keşfedin","hero.cta2":"Birlikte Üretelim","hero.m1":"temel hizmet","hero.m2":"iki dilli ekip","hero.m3b":"Ücretsiz","hero.m3":"ilk danışmanlık","hero.flow":"Müşteri akışı","hero.f1":"Yeni talep","hero.f2":"Rezervasyon onaylandı","hero.f3":"Ödeme alındı","hero.scroll":"Keşfetmek için kaydırın",
+    "intro.eyebrow":"Tek adreste dijital ajans","intro.big":"Siz söyleyin — gerisini <em>biz hallederiz.</em> İlk logo taslağından hesabınıza düşen ödemeye kadar, işletmenizi premium gösteren ve sorunsuz çalıştıran araçları YD kurar.","intro.a":"Görünür olun","intro.at":"Akılda kalan bir marka ve web sitesiyle görünürlük ve bilinirlik kazanın.","intro.b":"Doğru kişilere ulaşın","intro.bt":"Herkese değil, sizin kitlenize göre hazırlanmış sosyal medya ve içerik.","intro.c":"Ödeme alın, rezervasyon alın","intro.ct":"İlk günden çalışan hazır ödeme, sipariş ve rezervasyon sistemleri.","intro.d":"Daha az eforla büyüyün","intro.dt":"Tabloların ve manuel takiplerin yerini alan otomasyonlar ve paneller.",
+    "svc.eyebrow":"Neler yapıyoruz","svc.title":"İşletmenizin büyümek için ihtiyaç duyduğu <em>her şey.</em>","svc.lead":"Tek bir hizmet seçin ya da birleştirin. Her proje markanıza özel tasarlanır — herkesinkine benzeyen şablonlar yok.","svc.discuss":"Bu hizmeti konuşalım","svc.popular":"En çok tercih edilen",
+    "s1.t":"Web Tasarım & Geliştirme","s1.d":"Premium görünen, ziyaretçiyi müşteriye dönüştüren hızlı, mobil öncelikli web siteleri.","s1.a":"Kurumsal siteler","s1.b":"Açılış sayfaları","s1.c":"Hosting kurulumu",
+    "s2.t":"E-ticaret & Online Ödeme","s2.d":"Online mağazalar ve hazır ödeme sistemleri — kart, ödeme linki ve fatura, bankanıza bağlı.","s2.a":"Online mağaza","s2.b":"Ödeme linkleri","s2.c":"Faturalar","s2.e":"Stok",
+    "s3.t":"Rezervasyon & Sipariş Sistemleri","s3.d":"Otomatik onay ve hatırlatmalı randevu, rezervasyon ve QR menü sistemleri.","s3.a":"Randevular","s3.b":"QR menüler","s3.c":"Hatırlatmalar",
+    "s4.t":"İş Sistemleri & Otomasyon","s4.d":"Tabloların yerini alan, size her hafta saatler kazandıran CRM, panel ve iş akışları.","s4.a":"Paneller","s4.b":"Yapay zekâ otomasyonu",
+    "s5.t":"Sosyal Medya Yönetimi","s5.d":"Müşterilerinizin gerçekten kullandığı platformlarda strateji, paylaşım ve topluluk yönetimi.","s5.a":"İçerik takvimi","s5.b":"Aylık raporlar","s5.c":"Reklamlar",
+    "s6.t":"İçerik Üretimi","s6.d":"İnsanları kaydırmayı bıraktıran fotoğraf çekimleri, Reels ve görsel içerikler.","s6.a":"Fotoğraf çekimi","s6.b":"Metin yazarlığı",
+    "s7.t":"Marka Kimliği & Grafik Tasarım","s7.d":"Logo, renk, tipografi ve markanızın ihtiyaç duyduğu her basılı ya da dijital materyal.","s7.a":"Logo","s7.b":"Marka rehberi","s7.c":"Baskı",
+    "s8.t":"Marka Stratejisi & İş Planları","s8.d":"İşletmenize dışarıdan bir bakış: konumlandırma, mesaj ve büyüme için net bir plan.","s8.a":"Konumlandırma","s8.b":"İş planı","s8.c":"Atölyeler",
+    "pk.eyebrow":"Hazır çözümler","pk.title":"Bir <em>paketle</em> daha hızlı yayına çıkın.","pk.lead":"Markanıza göre uyarladığımız kanıtlanmış sistemler — ihtiyacınız olmayan şeylere ödeme yapmadan hızla yayına çıkın.","pk.quote":"Size özel teklif","pk.one":"tek seferlik","pk.mo":"aylık","pk.get":"Bu paketi alın","pk.pop":"En avantajlı","pk.note":"Farklı bir şeye mi ihtiyacınız var? Tüm paketler birleştirilebilir ve uyarlanabilir.","pk.custom":"Özel plan oluşturun",
+    "p1.t":"Başlangıç","p1.f":"Hızla profesyonel bir varlığa ihtiyaç duyan yeni işletmeler için.","p1.a":"5 sayfaya kadar web sitesi","p1.b":"Mobil öncelikli tasarım","p1.c":"WhatsApp & iletişim formu","p1.d":"Google Haritalar & temel SEO",
+    "p2.t":"İşletme","p2.f":"Rezervasyon ve talep alan hizmet işletmeleri için.","p2.a":"Başlangıç paketindeki her şey","p2.b":"Online rezervasyon sistemi","p2.c":"Otomatik onay & hatırlatmalar","p2.d":"İki dilli site (EN/TR)",
+    "p3.t":"Ticaret","p3.f":"Online satış yapmaya ve ödeme almaya hazır markalar için.","p3.a":"Online mağaza veya sipariş sitesi","p3.b":"Kartla ödeme & ödeme linkleri","p3.c":"Sipariş & stok paneli","p3.d":"Lansman içerik seti",
+    "p4.t":"Büyüme","p4.f":"İçerik, sosyal medya ve bakım için aylık bir partner.","p4.a":"Sosyal medya yönetimi","p4.b":"Aylık içerik & Reels","p4.c":"SEO blog & site güncellemeleri","p4.d":"Aylık performans raporu",
+    "ph.eyebrow":"Felsefemiz","ph.title":"Dijital varlıktan fazlası. Büyümenin <em>daha iyi</em> bir yolu.","ph.lead":"Çoğu işletme bir tasarımcı, bir yazılımcı, bir sosyal medya freelancer'ı ve bir yığın tabloyla uğraşır. Biz hepsini tek çatı altında topluyoruz — tek vizyon, tek ekip, tek muhatap.","ph.a":"Kreatif yönetim","ph.b":"Dijital deneyimler","ph.c":"İçerik prodüksiyonu","ph.d":"İş sistemleri","ph.e":"Eksiksiz bir dijital temel",
+    "ap.eyebrow":"Yaklaşımımız","ap.title":"Başarıya adım adım bir <em>yol haritası.</em>","ap.lead":"Net bir süreç sürpriz olmaması demektir — ne olduğunu, sırada ne olduğunu ve ne zaman hazır olacağını her zaman bilirsiniz.","ap.1":"Keşfet","ap.1t":"Hedeflerinizi, kitlenizi ve sizi geride tutan zorlukları öğreniyoruz.","ap.1d":"→ Ücretsiz danışmanlık","ap.2":"Strateji Oluştur","ap.2t":"İş başlamadan önce kapsam, takvim ve net teklif içeren size özel bir plan.","ap.2d":"→ Teklif & plan","ap.3":"Üret","ap.3t":"Tasarlıyor, geliştiriyor ve üretiyoruz — süreç boyunca geri bildirim verebilmeniz için ilerlemeyi paylaşıyoruz.","ap.3d":"→ Tasarım, geliştirme, test","ap.4":"Büyü","ap.4t":"Yayına alıyor, destek veriyor ve işletmeniz büyüdükçe varlığınızı geliştirmeye devam ediyoruz.","ap.4d":"→ Yayın & destek",
+    "wk.eyebrow":"Seçili işler","wk.title":"Üretmeyi sevdiğimiz <em>fikirler.</em>","wk.lead":"Yaptığımız projelere bir bakış. Bunlar tarzımızı ve sistemlerimizi gösteren konsept çalışmalardır.","wk.all":"Tümü","wk.web":"Web Siteleri","wk.social":"Sosyal Medya","wk.content":"İçerik","wk.systems":"Sistemler","wk.concept":"Konsept","wk.note":"Bir sonraki vaka çalışmamız sizin işletmeniz olsun mu?","wk.start":"Projeye başlayın",
+    "w1":"QR menü ve masadan sipariş özellikli kafe web sitesi.","w2":"Moda markası için lookbook çekimi ve Instagram lansmanı.","w3":"SMS hatırlatmalı klinik rezervasyon sistemi ve hasta CRM'i.","w4":"Online kaporalı, iki dilli kiralama web sitesi.","w5":"Restoran için Reels serisi ve aylık sosyal medya takvimi.","w6":"Düzenli ödemeli spor salonu üyelikleri ve üye paneli.",
+    "vm.eyebrow":"Neden varız","vm.v":"Vizyon","vm.vt":"Büyüyen işletmelerin ilk tercih ettiği dijital partner olmak — premium işler ve ölçülebilir sonuçlarla tanınmak.","vm.m":"Misyon","vm.mt":"Her müşteriye benzersiz bir kimlik ve müşteri kazandıran, zaman kazandıran ve büyümesine yardımcı olan çalışan sistemler sunmak.","vm.ind":"Kimlerle çalışıyoruz",
+    "i1":"Kafeler & restoranlar","i2":"Güzellik & sağlıklı yaşam","i3":"Klinikler","i4":"Moda & perakende","i5":"Emlak & kiralama","i6":"Eğitim","i7":"Spor salonları","i8":"Girişimler & kişisel markalar",
+    "ab.eyebrow":"YD Hakkında","ab.title":"<em>İşletmeniz</em> etrafında kurgulandı.","ab.lead":"YD; markanız, online varlığınız, içerikleriniz ve operasyonlarınız için tek partneriniz olan bir dijital stüdyodur. İngilizce ve Türkçe çalışıyor, her projeyi arkasındaki işletmeye özel olarak sıfırdan tasarlıyoruz.","ab.cta":"Bizimle çalışın","ab.1":"Kişiye özel çözümler","ab.1t":"Herkese uyan tek beden yok. Her şey sizin hedeflerinizden ve müşterilerinizden başlar.","ab.2":"Özenli tasarım","ab.2t":"Markanızı en iyi şekilde gösteren premium, sanat yönetimli işler.","ab.3":"Pratik teknoloji","ab.3t":"Gerçek, çalışan sistemler — her buton işe yarar bir şey yapar.","ab.4":"Önce iş hedefleri","ab.4t":"Başarıyı sonuçlarınızla ölçüyoruz: daha fazla müşteri, daha fazla rezervasyon, daha az iş yükü.",
+    "fq.eyebrow":"Bize her şeyi sorun","fq.title":"Sorular, <em>cevaplar.</em>","fq.lead":"Aradığınızı bulamadınız mı? WhatsApp'tan yazın — hızlı dönüş yapıyoruz.","fq.cta":"WhatsApp'tan sorun",
+    "q1":"Bir web sitesi veya sistem ne kadar tutar?","a1":"Her işletme farklıdır, bu yüzden her projeyi kapsamına göre fiyatlandırıyoruz. Ücretsiz danışmanlığın ardından net ve sabit bir teklif alırsınız — gizli maliyet yok.","q2":"Bir proje ne kadar sürer?","a2":"Kapsama bağlıdır. Sistemler hazır olduğu için paketler daha hızlı yayına çıkar. Başlamadan önce teklifinizle birlikte bir takvim alırsınız.","q3":"Web sitem üzerinden online ödeme alabilir miyim?","a3":"Evet. Kartla ödeme, ödeme linki ve faturalar için ülkenizde kullanılabilen iyzico, PayTR veya Stripe gibi güvenilir ödeme sağlayıcılarını entegre ediyoruz.","q4":"İşletmem her sosyal ağda olmalı mı?","a4":"Şart değil. Emeğiniz doğru yere gitsin diye müşterilerinizin gerçekten vakit geçirdiği platformlara odaklanıyoruz.","q5":"Web sitemi kendim güncelleyebilecek miyim?","a5":"Evet. Size kolay bir düzenleyici kurabilir ya da güncellemeleri aylık bir plan kapsamında biz yapabiliriz — hangisi size uygunsa.","q6":"Türkiye dışındaki işletmelerle çalışıyor musunuz?","a6":"Evet. İngilizce ve Türkçe olarak, nerede olurlarsa olsunlar müşterilerimizle uzaktan çalışıyoruz.","q7":"Başlamak için sizden ne gerekiyor?","a7":"Sadece işletmeniz ve hedefleriniz hakkında kısa bir sohbet. Logonuz, fotoğraflarınız veya beğendiğiniz örnekler varsa harika — yoksa biz oluşturabiliriz.",
+    "ct.eyebrow":"İletişim","ct.title":"Sıradakini <em>birlikte</em> kuralım.","ct.lead":"Bize işletmenizden ve ihtiyacınızdan bahsedin. İlk danışmanlık ücretsiz.","ct.wa":"En hızlı dönüş","ct.wab":"WhatsApp'tan yazın","ct.ph":"Telefon / WhatsApp","ct.copy":"Kopyala",
+    "f.name":"Adınız","f.biz":"İşletme adı","f.opt":"(isteğe bağlı)","f.email":"E-posta","f.service":"Neye ihtiyacınız var?","f.choose":"Bir hizmet seçin","f.notsure":"Henüz emin değilim — konuşalım","f.pkg":"Bir paketle ilgileniyor musunuz?","f.none":"Emin değilim","f.msg":"Projenizden bahsedin","f.send":"WhatsApp'ta devam et","f.note":"Mesajınız WhatsApp'ta gönderilmeye hazır şekilde açılır. Bu sitede hiçbir şey saklanmaz.",
+    "band.t":"İşletmenizi <em>bir üst seviyeye</em><br>taşımaya hazır mısınız?","band.c":"Ücretsiz danışmanlık alın",
+    "ft.tag":"Büyüyen işletmeler için web siteleri, ödeme & rezervasyon sistemleri, sosyal medya ve içerik.","ft.explore":"Keşfet","ft.company":"Şirket","ft.vision":"Vizyon & Misyon","ft.touch":"İletişim","ft.msg":"Bize mesaj gönderin","ft.rights":"Tüm hakları saklıdır.","ft.top":"Başa dön ↑"
+  };
+  var UI = {
+    en:{copied:"Number copied",copyFail:"Copy failed — number: +90 533 573 17 99",req:"Please fill in your name, a valid email, a service and a short message.",opening:"Opening WhatsApp…",
+        msgHead:"Hello YD Agency! I'd like to discuss a project.",name:"Name",biz:"Business",email:"Email",service:"Service",pkg:"Package",msg:"Project",
+        mq:["Websites","Online Payments","Booking Systems","Social Media","Content","Branding","Automation","E-commerce"]},
+    tr:{copied:"Numara kopyalandı",copyFail:"Kopyalanamadı — numara: +90 533 573 17 99",req:"Lütfen adınızı, geçerli bir e-posta, bir hizmet ve kısa bir mesaj yazın.",opening:"WhatsApp açılıyor…",
+        msgHead:"Merhaba YD Agency! Bir proje hakkında görüşmek istiyorum.",name:"Ad",biz:"İşletme",email:"E-posta",service:"Hizmet",pkg:"Paket",msg:"Proje",
+        mq:["Web Siteleri","Online Ödeme","Rezervasyon Sistemleri","Sosyal Medya","İçerik","Markalaşma","Otomasyon","E-ticaret"]}
+  };
+
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var EN = {};
+  nodes.forEach(function(n){ var k=n.getAttribute("data-i18n"); if(!(k in EN)) EN[k]=n.innerHTML; });
+  var lang = "en";
+
+  function setLang(l){
+    lang = (l==="tr")?"tr":"en";
+    var dict = lang==="tr"?TR:EN;
+    nodes.forEach(function(n){ var k=n.getAttribute("data-i18n"); if(dict[k]!=null) n.innerHTML=dict[k]; });
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-lang")===lang)); });
+    buildMarquee();
+    try{ localStorage.setItem("yd-lang", lang); }catch(e){}
+  }
+
+  function buildMarquee(){
+    var items = UI[lang].mq, html="";
+    for(var r=0;r<2;r++) items.forEach(function(t){ html += "<span>"+t+"</span>"; });
+    document.getElementById("mq").innerHTML = html;
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(function(b){
+    b.addEventListener("click", function(){ setLang(b.getAttribute("data-lang")); });
+  });
+  var saved=null; try{ saved = localStorage.getItem("yd-lang"); }catch(e){}
+  if(!saved){ var nl=(navigator.language||"").toLowerCase(); if(nl.indexOf("tr")===0) saved="tr"; }
+  setLang(saved||"en");
+
+  /* ---------- Nav ---------- */
+  var nav = document.getElementById("nav"), fab = document.getElementById("fab");
+  function onScroll(){
+    var y = window.scrollY;
+    nav.classList.toggle("scrolled", y>20);
+    fab.classList.toggle("show", y>window.innerHeight*0.8);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  var burger = document.getElementById("burger");
+  function closeMenu(){ document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded","false"); document.body.style.overflow=""; }
+  burger.addEventListener("click", function(){
+    var open = !document.body.classList.contains("menu-open");
+    document.body.classList.toggle("menu-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open?"hidden":"";
+  });
+  document.querySelectorAll("#drawer a").forEach(function(a){ a.addEventListener("click", closeMenu); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape") closeMenu(); });
+
+  /* Active section highlight */
+  var links = document.querySelectorAll(".menu a");
+  var secs = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute("href")); });
+  if("IntersectionObserver" in window){
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var i=secs.indexOf(e.target); links.forEach(function(l,j){ l.classList.toggle("active", i===j); }); } });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    secs.forEach(function(s){ if(s) so.observe(s); });
+
+    /* Reveal */
+    var ro = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); ro.unobserve(e.target); } });
+    },{rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".rv").forEach(function(el){ ro.observe(el); });
+  } else {
+    document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* ---------- Work filter ---------- */
+  var fbtns = document.querySelectorAll("[data-filter]");
+  fbtns.forEach(function(b){
+    b.addEventListener("click", function(){
+      var f = b.getAttribute("data-filter");
+      fbtns.forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); });
+      document.querySelectorAll(".work").forEach(function(w){
+        var show = f==="all" || w.getAttribute("data-cat").split(" ").indexOf(f)>-1;
+        w.classList.toggle("hide", !show);
+        if(show) w.classList.add("in");
+      });
+    });
+  });
+
+  /* ---------- Prefill form from service / package buttons ---------- */
+  var form = document.getElementById("form"), sel = document.getElementById("service");
+  document.querySelectorAll("[data-service]").forEach(function(a){
+    a.addEventListener("click", function(){ sel.value = a.getAttribute("data-service"); sel.classList.remove("err"); });
+  });
+  document.querySelectorAll("[data-package]").forEach(function(a){
+    a.addEventListener("click", function(){
+      var p = a.getAttribute("data-package");
+      var r = form.querySelector('input[name="package"][value="'+p+'"]'); if(r) r.checked = true;
+      if(!sel.value) sel.value = p==="Growth" ? "social" : (p==="Commerce" ? "pay" : (p==="Business" ? "book" : "web"));
+    });
+  });
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById("toast"), tt;
+  function toast(m){ toastEl.textContent=m; toastEl.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){ toastEl.classList.remove("show"); },2600); }
+
+  /* ---------- Copy number ---------- */
+  var copyBtn = document.getElementById("copyBtn");
+  copyBtn.addEventListener("click", function(){
+    var v = copyBtn.getAttribute("data-copy");
+    function ok(){ copyBtn.classList.add("ok"); toast(UI[lang].copied); setTimeout(function(){ copyBtn.classList.remove("ok"); },2000); }
+    function fallback(){
+      var ta=document.createElement("textarea"); ta.value=v; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0";
+      document.body.appendChild(ta); ta.select();
+      var done=false; try{ done=document.execCommand("copy"); }catch(e){}
+      document.body.removeChild(ta); done?ok():toast(UI[lang].copyFail);
+    }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(v).then(ok, fallback); } else fallback();
+  });
+
+  /* ---------- Form → WhatsApp ---------- */
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = new FormData(form), u = UI[lang];
+    var name=(d.get("name")||"").trim(), email=(d.get("email")||"").trim(), msg=(d.get("message")||"").trim(), svc=d.get("service");
+    var bad = [];
+    if(!name) bad.push("name");
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) bad.push("email");
+    if(!svc) bad.push("service");
+    if(msg.length<3) bad.push("message");
+    form.querySelectorAll("input,select,textarea").forEach(function(el){ el.classList.toggle("err", bad.indexOf(el.name)>-1); });
+    var errEl = document.getElementById("ferr");
+    if(bad.length){ errEl.textContent=u.req; var first=form.querySelector('[name="'+bad[0]+'"]'); if(first) first.focus(); return; }
+    errEl.textContent="";
+    var svcLabel = sel.options[sel.selectedIndex].text;
+    var lines = [u.msgHead, "", u.name+": "+name];
+    var biz=(d.get("business")||"").trim(); if(biz) lines.push(u.biz+": "+biz);
+    lines.push(u.email+": "+email, u.service+": "+svcLabel);
+    var pkg=d.get("package"); if(pkg){ var pl=form.querySelector('input[name="package"][value="'+pkg+'"]+span'); lines.push(u.pkg+": "+(pl?pl.textContent:pkg)); }
+    lines.push("", u.msg+": "+msg);
+    var url = "https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n"));
+    toast(u.opening);
+    var w = window.open(url, "_blank");
+    if(w){ try{ w.opener = null; }catch(err){} } else { window.location.href = url; }
+  });
+  form.querySelectorAll("input,select,textarea").forEach(function(el){ el.addEventListener("input", function(){ el.classList.remove("err"); }); });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
